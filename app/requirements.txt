@@ -1,0 +1,9 @@
+fastapi
+keras
+numpy
+tensorflow
+joblib
+pillow
+google-generativeai
+uvicorn
+
