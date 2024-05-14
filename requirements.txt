@@ -1,0 +1,12 @@
+fastapi
+keras==2.15.0
+numpy
+tensorflow==2.15.0
+joblib
+pillow
+google-generativeai
+uvicorn
+keras-preprocessing
+keras-utils
+mangum
+

@@ -4,7 +4,6 @@ from keras.utils import pad_sequences
 from keras.models import Model, load_model
 from keras.applications.vgg16 import VGG16
 from keras.applications.vgg16 import preprocess_input
-from keras.utils import load_img, img_to_array
 from keras.preprocessing.sequence import pad_sequences
 from keras.applications.vgg16 import preprocess_input
 import numpy as np
@@ -13,6 +12,7 @@ import os
 from PIL import Image
 import shutil
 import google.generativeai as genai
+from mangum import Mangum
 
 genai.configure(api_key="AIzaSyCFF-rfVi8KH1gNHuX93n6j9BF7468D1Mw")
 
@@ -177,6 +177,9 @@ def short_headline(arr_ans):
 # print(article)
 
 app = FastAPI()
+
+handler = Mangum(app)
+
 
 @app.get('/')
 async def root():
